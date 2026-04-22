@@ -40,32 +40,32 @@ canvas{position:absolute;top:0;left:0;width:100%;height:100%;}
 #pb-restart{background:linear-gradient(135deg,#f59e0b,#b45309);box-shadow:0 4px 14px rgba(245,158,11,.5);}
 
 /* CHARACTER SELECT */
-#charscreen{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:rgba(0,30,90,0.92);backdrop-filter:blur(14px);z-index:20;}
-#charscreen h1{font-family:'Fredoka One',cursive;font-size:2rem;color:#fff;text-shadow:0 0 20px #60a5fa;letter-spacing:2px;margin-bottom:2px;}
-#charscreen p{font-family:'Nunito',sans-serif;font-size:.8rem;color:rgba(255,255,255,0.5);letter-spacing:1px;margin-bottom:4px;}
-#char-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:420px;width:90%;}
-.char-card{display:flex;flex-direction:column;align-items:center;gap:4px;padding:10px 6px;border-radius:16px;border:2px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.06);cursor:pointer;transition:transform .1s,border-color .1s,background .1s;pointer-events:all;}
+#charscreen{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:rgba(0,30,90,0.92);backdrop-filter:blur(14px);z-index:20;padding:6px 0;}
+#charscreen h1{font-family:'Fredoka One',cursive;font-size:1.4rem;color:#fff;text-shadow:0 0 20px #60a5fa;letter-spacing:2px;margin-bottom:0;}
+#charscreen p{font-family:'Nunito',sans-serif;font-size:.7rem;color:rgba(255,255,255,0.5);letter-spacing:1px;margin-bottom:2px;}
+#char-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;max-width:480px;width:94%;}
+.char-card{display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 4px;border-radius:12px;border:2px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.06);cursor:pointer;transition:transform .1s,border-color .1s,background .1s;pointer-events:all;}
 .char-card:hover{background:rgba(255,255,255,0.13);border-color:rgba(255,255,255,0.4);transform:scale(1.06);}
 .char-card.selected{border-color:#fde68a;background:rgba(253,230,138,0.18);transform:scale(1.08);}
 .char-card:active{transform:scale(0.94);}
-.char-emoji{font-size:2.4rem;line-height:1;}
-.char-name{font-family:'Fredoka One',cursive;font-size:.7rem;color:rgba(255,255,255,0.75);text-align:center;}
-.char-belt{width:28px;height:6px;border-radius:3px;margin-top:2px;}
-#char-confirm{font-family:'Fredoka One',cursive;font-size:1.1rem;padding:11px 40px;background:linear-gradient(135deg,#f97316,#eab308);color:#fff;border:none;border-radius:50px;cursor:pointer;pointer-events:all;box-shadow:0 4px 18px rgba(249,115,22,0.5);transition:transform .1s;margin-top:4px;}
+.char-emoji{font-size:1.8rem;line-height:1;}
+.char-name{font-family:'Fredoka One',cursive;font-size:.62rem;color:rgba(255,255,255,0.75);text-align:center;}
+.char-belt{width:22px;height:5px;border-radius:3px;margin-top:1px;}
+#char-confirm{font-family:'Fredoka One',cursive;font-size:1rem;padding:9px 36px;background:linear-gradient(135deg,#f97316,#eab308);color:#fff;border:none;border-radius:50px;cursor:pointer;pointer-events:all;box-shadow:0 4px 18px rgba(249,115,22,0.5);transition:transform .1s;margin-top:2px;flex-shrink:0;}
 #char-confirm:active{transform:scale(0.94);}
 #char-confirm:disabled{opacity:.4;cursor:default;}
-#lvlscreen{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:rgba(0,40,100,0.80);backdrop-filter:blur(12px);}
-#lvlscreen h1{font-family:'Fredoka One',cursive;font-size:2.2rem;color:#fff;text-shadow:0 0 20px #60a5fa;letter-spacing:2px;}
-#lvlscreen p{font-family:'Nunito',sans-serif;font-size:.85rem;color:rgba(255,255,255,0.55);letter-spacing:1px;}
-.lvlbtn{font-family:'Fredoka One',cursive;font-size:1.15rem;width:200px;padding:12px 0;border:none;border-radius:50px;cursor:pointer;pointer-events:all;transition:transform .1s;color:#fff;}
+#lvlscreen{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:rgba(0,40,100,0.80);backdrop-filter:blur(12px);}
+#lvlscreen h1{font-family:'Fredoka One',cursive;font-size:1.8rem;color:#fff;text-shadow:0 0 20px #60a5fa;letter-spacing:2px;}
+#lvlscreen p{font-family:'Nunito',sans-serif;font-size:.8rem;color:rgba(255,255,255,0.55);letter-spacing:1px;}
+.lvlbtn{font-family:'Fredoka One',cursive;font-size:1.1rem;width:200px;padding:11px 0;border:none;border-radius:50px;cursor:pointer;pointer-events:all;transition:transform .1s;color:#fff;}
 .lvlbtn:active{transform:scale(0.92);}
 #lb-easy{background:linear-gradient(135deg,#22c55e,#15803d);box-shadow:0 4px 14px rgba(34,197,94,.5);}
 #lb-med {background:linear-gradient(135deg,#f59e0b,#b45309);box-shadow:0 4px 14px rgba(245,158,11,.5);}
 #lb-hard{background:linear-gradient(135deg,#ef4444,#991b1b);box-shadow:0 4px 14px rgba(239,68,68,.5);}
 
 
-#pause-btn{width:44px;height:44px;font-size:1.1rem;position:absolute;top:8px;right:8px;background:rgba(0,60,140,0.6);border:1px solid rgba(255,255,255,0.25);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;pointer-events:all;color:#fff;font-family:'Fredoka One',cursive;z-index:10;}
-#fs-btn{width:38px;height:38px;font-size:1rem;position:absolute;top:8px;right:60px;background:rgba(0,60,140,0.6);border:1px solid rgba(255,255,255,0.25);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;pointer-events:all;color:#fff;font-family:'Fredoka One',cursive;z-index:10;}
+#pause-btn{width:54px;height:54px;font-size:1.3rem;position:absolute;top:8px;right:8px;background:rgba(0,60,140,0.7);border:2px solid rgba(255,255,255,0.35);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;pointer-events:all;color:#fff;font-family:'Fredoka One',cursive;z-index:10;}
+#fs-btn{width:54px;height:54px;font-size:1.3rem;position:absolute;top:8px;right:70px;background:rgba(0,60,140,0.7);border:2px solid rgba(255,255,255,0.35);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;pointer-events:all;color:#fff;font-family:'Fredoka One',cursive;z-index:10;}
 
 /* Landscape orientation hint overlay */
 #rotate-hint{display:none;position:fixed;inset:0;z-index:9999;background:rgba(2,40,100,0.97);flex-direction:column;align-items:center;justify-content:center;gap:16px;}
@@ -273,17 +273,39 @@ let cpuLvl=1;
 //  INPUT
 // ════════════════════════════════════════════
 const held={l:false,r:false,j:false};
-function bindBtn(id,k){
-  const el=document.getElementById(id);
-  const dn=e=>{e.preventDefault();held[k]=true; el.classList.add('pressed'); getAudio();};
-  const up=e=>{e.preventDefault();held[k]=false;el.classList.remove('pressed');};
-  el.addEventListener('touchstart',dn,{passive:false});
-  el.addEventListener('touchend',up,{passive:false});
-  el.addEventListener('touchcancel',up,{passive:false});
-  el.addEventListener('mousedown',dn);
-  el.addEventListener('mouseup',up);
-  el.addEventListener('mouseleave',up);
+
+// ── Canvas touch zones ──
+// Bovenkant (35%) = springen | Linksonder (45%) = links | Rechtsonder (45%) = rechts
+function getTouchZone(t,rect){
+  const x=t.clientX-rect.left, y=t.clientY-rect.top;
+  const w=rect.width, h=rect.height;
+  if(y<h*0.35) return 'j';
+  if(x<w*0.45) return 'l';
+  if(x>w*0.55) return 'r';
+  return null;
 }
+function updateHeldFromTouches(touches,rect){
+  held.l=false;held.r=false;held.j=false;
+  Array.from(touches).forEach(t=>{
+    const z=getTouchZone(t,rect);
+    if(z)held[z]=true;
+  });
+}
+canvas.addEventListener('touchstart',e=>{
+  e.preventDefault(); getAudio();
+  updateHeldFromTouches(e.touches,canvas.getBoundingClientRect());
+},{passive:false});
+canvas.addEventListener('touchmove',e=>{
+  e.preventDefault();
+  updateHeldFromTouches(e.touches,canvas.getBoundingClientRect());
+},{passive:false});
+canvas.addEventListener('touchend',e=>{
+  e.preventDefault();
+  updateHeldFromTouches(e.touches,canvas.getBoundingClientRect());
+},{passive:false});
+canvas.addEventListener('touchcancel',e=>{
+  held.l=false;held.r=false;held.j=false;
+},{passive:false});
 
 const K={};
 document.addEventListener('keydown',e=>{K[e.key]=true;if(e.key==='p'||e.key==='Escape')togglePause();});
