@@ -28,8 +28,8 @@
 #setbadge{font-family:'Fredoka One',cursive;font-size:.72rem;color:rgba(255,255,255,0.7);}
 #combobadge{font-family:'Fredoka One',cursive;font-size:.7rem;color:#fb923c;min-height:1rem;}
 
-#cwrap{flex:1;position:relative;overflow:hidden;}
-canvas{position:absolute;top:0;left:0;width:100%;height:100%;}
+#cwrap{flex:1;position:relative;overflow:hidden;width:100%;}
+canvas{position:absolute;top:0;left:0;display:block;}
 
 /* OVERLAYS */
 #overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none;gap:12px;}
@@ -229,17 +229,20 @@ const CW=VW, CH=VH;
 
 function resize(){
   const wrap=document.getElementById('cwrap');
-  const rw=wrap.clientWidth, rh=wrap.clientHeight;
+  const rw=wrap.clientWidth||window.innerWidth;
+  const rh=wrap.clientHeight||(window.innerHeight - document.getElementById('scorebar').offsetHeight);
   SCALE=Math.min(rw/VW, rh/VH);
   canvas.width =Math.round(VW*SCALE);
   canvas.height=Math.round(VH*SCALE);
-  // Centreer canvas in cwrap via CSS
-  canvas.style.left=Math.round((rw-canvas.width )/2)+'px';
+  canvas.style.left=Math.round((rw-canvas.width)/2)+'px';
   canvas.style.top =Math.round((rh-canvas.height)/2)+'px';
-  OX=(rw-canvas.width )/2;
+  OX=(rw-canvas.width)/2;
   OY=(rh-canvas.height)/2;
 }
-resize(); window.addEventListener('resize',resize);
+resize();
+window.addEventListener('resize',resize);
+window.addEventListener('orientationchange',()=>setTimeout(resize,150));
+setTimeout(resize,300);
 
 // ════════════════════════════════════════════
 //  CONSTANTS — vaste waarden, altijd gelijk
