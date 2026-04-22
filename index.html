@@ -415,6 +415,14 @@ function startGame(lvl){
   }
   gameRunning=true;paused=false;
   init();
+  // Automatisch fullscreen bij start
+  const el=document.documentElement;
+  if(!document.fullscreenElement){
+    (el.requestFullscreen||el.webkitRequestFullscreen||el.mozRequestFullScreen||el.msRequestFullscreen).call(el).catch(()=>{});
+    if(screen.orientation&&screen.orientation.lock){
+      screen.orientation.lock('landscape').catch(()=>{});
+    }
+  }
 }
 function togglePause(){
   if(!gameRunning||over)return;
